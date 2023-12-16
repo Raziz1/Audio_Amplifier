@@ -19,10 +19,19 @@ While coming up with a design for this project I came up with a few constraints.
 * I wanted to avoid any audio amplification IC's. This allowed me to focus on the more basic principles of amplification using BJT's and MOSFET's
 * I didn't have to make use of the full 30 watt power capabilites of the speaker
 
-# Design Process
+# Audio Amplifier Background
+To drive a speaker louder (higher output power) there are two things to keep in mind. These two elements are visible in the power equation $P = V × I$. To acheive a higher output power we must amplify both voltage and current. Therefore, we can split our amplifier design into two stages. The voltage/signal amplifier stage and the current/power amplifier stage. This is a very common practice in all audio amplifiers.
+
+The next part of the process was deciding on the desired classification of audio amplifiers for this design. There are four primary classes: A, B, AB, and class D. You can learn more about these classifications from the links below. 
+
+<p align="center">
+  <img align="center" width="368" height="256" src="https://blog.minicircuits.com/wp-content/uploads/2021/03/Amplifier_Classes-1.jpg">
+</p>
 
 # Parts
-
 # Resources
 * LTSPICE
-* https://www.falstad.com/circuit/
+* [Online Circuit Simulator](https://www.falstad.com/circuit/)
+* [Introduction to the Amplifier](https://www.electronics-tutorials.ws/amplifier/amp_1.html)
+* [Audio Amplifier Basics](https://www.youtube.com/watch?v=U0FIG2J6Zls&ab_channel=TexasInstruments)
+* [Power Amplifiers](https://en.wikipedia.org/wiki/Power_amplifier_classes#Class_C)
