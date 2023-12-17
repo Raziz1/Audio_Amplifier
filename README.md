@@ -7,7 +7,7 @@ Designing a push–pull audio amplifier for a car speaker
 The goal of this project was to design a simple audio amplifier to drive a 4-ohm, 30-watt speaker extracted from a car door. The objective was not to create the most efficient design, but rather to explore various design approaches.
 
 <p align="center">
-  <img align="center" width="256" height="256" src="/images/SA1HH920_Speakers.png">
+  <img align="center" width="256" height="256" src="./images/SA1HH920_Speakers.png">
 </p>
 
 ## To-do List 📃
@@ -57,23 +57,37 @@ The second decision was whether to use MOSFETs or BJTs for the power stage ampli
 # Design
 ## Schematic
 <p align="center">
-  <img align="center" width="712" height="512" src="/images/Audio_Amplifier_Schematic.png">
+  <img align="center" width="712" height="512" src="./images/Audio_Amplifier_Schematic.png">
   <p align="center"><small><i>LTSPICE Schematic Capture</i></small></p>
 </p>
 
 ## Simulation
 <p align="center">
-  <img align="center" width="712" height="512" src="/images/Simulation_Graphs.png">
+  <img align="center" width="712" height="512" src="./images/Simulation_Graphs.png">
   <p align="center"><small><i>[1]Input Voltage [2]Speaker Power Consumption [3]Output Current [4]Output Voltage</i></small</p>
 </p>
 
 <p align="center">
-  <img align="center" width="712" height="512" src="/images/Frequency_Response.png">
+  <img align="center" width="712" height="512" src="./images/Frequency_Response.png">
   <p align="center"><small><i>Circuit Frequency Response 20Hz - 48kHz</i></small</p>
 </p>
   
-
 # Parts
+## OP-AMP
+When selecting an op-amp for this project I had to consider the following:
+* Gand and bandwith
+* Low noise
+* Low total harmonic distortion
+* Slew rate
+* Power supply requirements
+* Temperature stability
+
+I ended up settling on the [LT1124](https://www.analog.com/en/products/lt1124.html) for the following reasons:
+* The power supply range was ±22V. My goal was to supply the positive rail with +20V and the negative rail with -20V
+* The slew rate can range from 3.9 - 4.5 V/us. To maintain high fidelity audio it is recommended to have a slew rate of 5V/us+. Nevertheless, we can determine the minimum slew rate given the expected output voltage and frequency. Our maximum output voltage should be 10V and our maximum frequency should be around 20kHz (The upper limit of human hearing). Using the slew rate formula ($Slew Rate = 2πfv$) .... ($2 * π * 20000 * 10 = 1.256V/μS$)
+* The Gain-Bandwith product of this op-amp is 12.5 MHz which is more than enough since our operating range is expected to be from 20Hz - 20kHz.
+* The op-amp also specifies low voltage noise typically around $2.7nV/√(Hz)$
+
 # Resources
 * LTSPICE
 * [Online Circuit Simulator](https://www.falstad.com/circuit/)
