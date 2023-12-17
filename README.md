@@ -52,6 +52,9 @@ The second decision was whether to use MOSFET's or BJT's for the power stage amp
   <img align="center" width="712" height="512" src="/images/SPICE_Simulation.png">
 </p>
 
+<p align="center">
+  <img align="center" width="712" height="512" src="/images/Frequency_Response.png">
+</p>
   
 
 # Parts
