@@ -39,7 +39,13 @@ The second decision was whether to use MOSFET's or BJT's for the power stage amp
 * The require no current to drive the gate pin
 * They can switch faster than BJTs, which can be beneficial in certain applications
 * Reduced distortion compared to some BJT designs
-* The onyl drawback is they tend to be more expensive than BJT's
+* The only drawback is they tend to be more expensive than BJT's
+
+# Design
+## Schematic
+
+## Simulation
+
 
   
 
