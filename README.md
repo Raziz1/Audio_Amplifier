@@ -28,6 +28,21 @@ The next part of the process was deciding on the desired classification of audio
   <img align="center" width="368" height="256" src="https://blog.minicircuits.com/wp-content/uploads/2021/03/Amplifier_Classes-1.jpg">
 </p>
 
+I ended up settling on the class AB design for the following reasons:
+* The class AB design is more efficient than the class A design (50 - 70% efficiency)
+* The class AB design doesn't suffer from the same clipping distortion that the class B design suffers from. The class AB design has the benefit of biasing the transistors in a way that ensures the transistors are conducting during all cycles of the input waveform.
+* It is less complex than a class D design
+* The only drawback is that when there is no input signal the transistors continute to conduct current resulting in wasted power
+
+The second decision was whether to use MOSFET's or BJT's for the power stage amplifier. I ended up settling on MOSFET's for the following reasons:
+* They generally have high input impedance, which reduces the loading effect on the preceding stages
+* The require no current to drive the gate pin
+* They can switch faster than BJTs, which can be beneficial in certain applications
+* Reduced distortion compared to some BJT designs
+* The onyl drawback is they tend to be more expensive than BJT's
+
+  
+
 # Parts
 # Resources
 * LTSPICE
