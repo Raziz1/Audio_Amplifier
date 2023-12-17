@@ -4,7 +4,7 @@ Designing a push–pull audio amplifier for a car speaker
 *DISCLAIMER - I want to preface by acknowledging that I'm not an expert in the realm of audio amplification. This field is incredibly vast and intricate. The project served as a valuable opportunity for me to delve deeper into this domain, but it's important to note that I might have made errors or made poor design choices in the process of learning* 
 
 ## Goal 🎯
-The goal of this project was to design a simple audio amplifier to drive a 4ohm 30 watt speaker that I pulled out from a car door. The goal was not to make the most efficent design but to explore various designs.
+The goal of this project was to design a simple audio amplifier to drive a 4-ohm, 30-watt speaker extracted from a car door. The objective was not to create the most efficient design, but rather to explore various design approaches.
 
 ## History
 Initially, I began by driving the speaker with my USB oscilloscope/waveform generator (Analog Discovery 2). The USB waveform generator has the ability to take an MP3 file as an input and output the corresponding waveform. It also has the ability to amplify the signal up to a peak voltage of 5V. However, there were a few problems with this:
@@ -14,15 +14,15 @@ Initially, I began by driving the speaker with my USB oscilloscope/waveform gene
 4. The final motivation was to see if I could drive the speaker signifcantyl louder. With a 1V waveform signal the loudest sound seemed to be around *INSERT DB MEASUREMENT*
 
 ## Constraints
-While coming up with a design for this project I came up with a few constraints. This prevented me from overcomplicating the design. The constraints/rules I settled on were the following ...
+While devising the design for this project, I established a few constraints to prevent overcomplication. The constraints/rules I settled on were as follows:
 * The input/audio signal would be anywhere from 100mV to 1V
 * I wanted to avoid any audio amplification IC's. This allowed me to focus on the more basic principles of amplification using BJT's and MOSFET's
 * I didn't have to make use of the full 30 watt power capabilites of the speaker
 
 # Audio Amplifier Background
-To drive a speaker louder (higher output power) there are two things to keep in mind. These two elements are visible in the power equation $P = V × I$. To acheive a higher output power we must amplify both voltage and current. Therefore, we can split our amplifier design into two stages. The voltage/signal amplifier stage and the current/power amplifier stage. This is a very common practice in all audio amplifiers.
+To drive a speaker louder (higher output power) there are two things to keep in mind. These elements are evident in the power equation $P = V × I$. To acheive a higher output power we must amplify both voltage and current. Achieving greater output power necessitates amplifying both voltage and current. Therefore, we divide our amplifier design into two stages: the voltage/signal amplifier stage and the current/power amplifier stage. This practice is widely employed in all types of audio amplifiers.
 
-The next part of the process was deciding on the desired classification of audio amplifiers for this design. There are four primary classes: A, B, AB, and class D. You can learn more about these classifications from the links below. 
+The subsequent step in the process involved determining the preferred classification of audio amplifiers for this design. There are four main classes: A, B, AB, and Class D. Further information about these classifications can be found in the links provided below.
 
 <p align="center">
   <img align="center" width="368" height="256" src="https://blog.minicircuits.com/wp-content/uploads/2021/03/Amplifier_Classes-1.jpg">
@@ -30,11 +30,11 @@ The next part of the process was deciding on the desired classification of audio
 
 I ended up settling on the class AB design for the following reasons:
 * The class AB design is more efficient than the class A design (50 - 70% efficiency)
-* The class AB design doesn't suffer from the same clipping distortion that the class B design suffers from. The class AB design has the benefit of biasing the transistors in a way that ensures the transistors are conducting during all cycles of the input waveform.
+* The Class AB design does not suffer from the same clipping distortion as the Class B design. It benefits from biasing the transistors in a manner that ensures their conduction throughout all cycles of the input waveform
 * It is less complex than a class D design
-* The only drawback is that when there is no input signal the transistors continute to conduct current resulting in wasted power
+* The only drawback is that when there is no input signal, the transistors continue to conduct current, resulting in wasted power
 
-The second decision was whether to use MOSFET's or BJT's for the power stage amplifier. I ended up settling on MOSFET's for the following reasons:
+The second decision was whether to use MOSFETs or BJTs for the power stage amplifier. I ultimately chose MOSFETs for the following reasons:
 * They generally have high input impedance, which reduces the loading effect on the preceding stages
 * The require no current to drive the gate pin
 * They can switch faster than BJTs, which can be beneficial in certain applications
