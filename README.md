@@ -44,11 +44,13 @@ The second decision was whether to use MOSFET's or BJT's for the power stage amp
 # Design
 ## Schematic
 <p align="center">
-  <img align="center" width="712" height="512" src="/images/Audio Amplifier AB-1.png">
+  <img align="center" width="712" height="512" src="/images/Audio_Amplifier_Schematic.png">
 </p>
 
 ## Simulation
-
+<p align="center">
+  <img align="center" width="712" height="512" src="/images/SPICE_Simulation.png">
+</p>
 
   
 
