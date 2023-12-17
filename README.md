@@ -6,6 +6,15 @@ Designing a push–pull audio amplifier for a car speaker
 ## Goal 🎯
 The goal of this project was to design a simple audio amplifier to drive a 4-ohm, 30-watt speaker extracted from a car door. The objective was not to create the most efficient design, but rather to explore various design approaches.
 
+## To-do List 📃
+- [x] Pick amplifier class
+- [x] Pick power stage amplifier
+- [x] Design and simulate in LTSPICE
+- [ ] Pick components with appropriate ratings
+- [ ] Determine thermal output of transistors
+- [ ] PCB design
+- [ ] Testing
+
 ## History
 Initially, I began by driving the speaker with my USB oscilloscope/waveform generator (Analog Discovery 2). The USB waveform generator has the ability to take an MP3 file as an input and output the corresponding waveform. It also has the ability to amplify the signal up to a peak voltage of 5V. However, there were a few problems with this:
 1. According to the datasheet, this waveform generator has the ability to output a maximum of 750mA. At a peak voltage of 5V, the power output would only be (0.75A x 5V = 3.75W) 3.75 watts, which is only about 13% of its power output capabilities
