@@ -45,15 +45,18 @@ The second decision was whether to use MOSFETs or BJTs for the power stage ampli
 ## Schematic
 <p align="center">
   <img align="center" width="712" height="512" src="/images/Audio_Amplifier_Schematic.png">
+  <p align="center"><small><i>LTSPICE Schematic Capture</i></small></p>
 </p>
 
 ## Simulation
 <p align="center">
-  <img align="center" width="712" height="512" src="/images/SPICE_Simulation.png">
+  <img align="center" width="712" height="512" src="/images/Simulation_Graphs.png">
+  <p align="center"><small><i>[1]Input Voltage [2]Speaker Power Consumption [3]Output Current [4]Output Voltage</i></small</p>
 </p>
 
 <p align="center">
   <img align="center" width="712" height="512" src="/images/Frequency_Response.png">
+  <p align="center"><small><i>Circuit Frequency Response 20Hz - 48kHz</i></small</p>
 </p>
   
 
