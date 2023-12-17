@@ -6,6 +6,10 @@ Designing a push–pull audio amplifier for a car speaker
 ## Goal 🎯
 The goal of this project was to design a simple audio amplifier to drive a 4-ohm, 30-watt speaker extracted from a car door. The objective was not to create the most efficient design, but rather to explore various design approaches.
 
+<p align="center">
+  <img align="center" width="256" height="256" src="/images/SA1HH920_Speakers.png">
+</p>
+
 ## To-do List 📃
 - [x] Pick amplifier class
 - [x] Pick power stage amplifier
