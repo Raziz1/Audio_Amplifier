@@ -88,6 +88,21 @@ I ended up settling on the [LT1124](https://www.analog.com/en/products/lt1124.ht
 * The Gain-Bandwith product of this op-amp is 12.5 MHz which is more than enough since our operating range is expected to be from 20Hz - 20kHz.
 * The op-amp also specifies low voltage noise typically around $2.7nV/√(Hz)$
 
+## DIODE
+When selecting the diode for this project I had to consider the following:
+* Forward voltage
+* Breakdown voltage
+* Recovery time
+
+I ended up settling on the [1N414](https://www.digikey.ca/en/products/detail/onsemi/1N4148/458603) for the following reasons:
+* The forward voltage of 1V at 10mA allowed me to bias the transistors in such a way that they were always conducting
+* The breakdown voltage of 100V is more than enough headroom that the amplified audio signal will not excedd this limit
+* Finally, the recovery time of 4ns is a relatively fast switching speed which should be more than enough in an audio amplification circuit
+
+## N-MOSFET
+When selecting the NMOS for this project I had to consider the following:
+*
+
 # Resources
 * LTSPICE
 * [Online Circuit Simulator](https://www.falstad.com/circuit/)
