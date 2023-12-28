@@ -104,6 +104,21 @@ I ended up settling on the [IPI80N04S4-03](https://www.infineon.com/cms/en/produ
 * The maximum power dissipation is 94 watts which is also far more than we actually need
 * The turn-on and turn-off delay time of the MOSFET is below 20ns which is relatively fast and should be suitable for this application.
 
+## P-MOSFET
+When selecting the PMOS for this project I had to consider the following:
+* Maximum VDS
+* VGS (Gate to source threshold voltage)
+* Maximum continuous current
+* Maximum power dissipation
+* Thermal characteristics
+* Switching times
+
+I ended up settling on the [IRF4905PbF](https://www.mouser.ca/ProductDetail/Infineon-Technologies/IRF4905PBF?qs=9%252BKlkBgLFf39l0HsWdxvdw%3D%3D&gad_source=1&gclid=Cj0KCQiA1rSsBhDHARIsANB4EJaXF58itK5_HPBzwH5cbdvt4D_4NhRjApflgyEw4rpWvVzHoUdLTREaAhYgEALw_wcB) for the following reasons:
+* The maximum VDS is -55V. According to the LTSpice simulations this gives us plenty of overhead room
+* The gate to source threshold voltage (VGS) ranges from -2V to -4V
+* The maximum continuous current (ID) is -74A which is far more than we actually need
+* The maximum power dissipation is 200 watts which is also far more than we actually need
+* The turn-on and turn-off delay time of the MOSFET is below 100ns which is relatively fast and should be suitable for this application.
 
 
 # Resources
