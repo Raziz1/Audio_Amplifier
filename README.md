@@ -4,7 +4,7 @@ Designing a push–pull audio amplifier for a car speaker
 *DISCLAIMER - I want to preface by acknowledging that I'm not an expert in the realm of audio amplification. This field is incredibly vast and intricate. The project served as a valuable opportunity for me to delve deeper into this domain, but it's important to note that I might have made errors or made poor design choices in the process of learning* 
 
 ## Goal 🎯
-The goal of this project was to design a simple audio amplifier to drive a 4-ohm, 30-watt speaker extracted from a car door. The objective was not to create the most efficient design, but rather to explore various design approaches.
+The goal of this project was to design a simple audio amplifier to drive a 4-ohm, 30-watt RMS (42 Watt peak) speaker extracted from a car door. The objective was not to create the most efficient design, but rather to explore various design approaches.
 
 <p align="center">
   <img align="center" width="256" height="256" src="./images/SA1HH920_Speakers.png">
@@ -21,16 +21,15 @@ The goal of this project was to design a simple audio amplifier to drive a 4-ohm
 
 ## History
 Initially, I began by driving the speaker with my USB oscilloscope/waveform generator (Analog Discovery 2). The USB waveform generator has the ability to take an MP3 file as an input and output the corresponding waveform. It also has the ability to amplify the signal up to a peak voltage of 5V. However, there were a few problems with this:
-1. According to the datasheet, this waveform generator has the ability to output a maximum of 750mA. At a peak voltage of 5V, the power output would only be (0.75A x 5V = 3.75W) 3.75 watts, which is only about 13% of its power output capabilities
+1. According to the datasheet, this waveform generator has the ability to output a maximum of 750mA. At a peak voltage of 5V, the power output would only be (0.75A x 5V = 3.75W peak * 0.707 = 2.65W RMS) 2.65 watts RMS, which is only about 9% of its power output capabilities
 2. When set to 5V peak output, the waveform generator only seemed to be able to push out 250mA. This means we were only achieving a power output of (0.25A * 5V = 1.25W) 1.25 watts
 3. Lastly, when set to 5V, the speaker seemed to suffer from a lot of distortion and resulted in very muddy tones
-4. The final motivation was to see if I could drive the speaker signifcantyl louder. With a 1V waveform signal the loudest sound seemed to be around *INSERT DB MEASUREMENT*
+4. The final motivation was to see if I could drive the speaker significantly louder. With a 1V waveform signal the loudest sound seemed to be around *INSERT DB MEASUREMENT*
 
 ## Constraints
 While devising the design for this project, I established a few constraints to prevent overcomplication. The constraints/rules I settled on were as follows:
 * The input/audio signal would be anywhere from 100mV to 1V
-* I wanted to avoid any audio amplification IC's. This allowed me to focus on the more basic principles of amplification using BJT's and MOSFET's
-* I didn't have to make use of the full 30 watt power capabilites of the speaker
+* I didn't have to make use of the full 30 watt power capabilities of the speaker
 
 # Audio Amplifier Background
 To drive a speaker louder (higher output power) there are two things to keep in mind. These elements are evident in the power equation $P = V × I$. To acheive a higher output power we must amplify both voltage and current. Achieving greater output power necessitates amplifying both voltage and current. Therefore, we divide our amplifier design into two stages: the voltage/signal amplifier stage and the current/power amplifier stage. This practice is widely employed in all types of audio amplifiers.
@@ -84,24 +83,28 @@ When selecting an op-amp for this project I had to consider the following:
 
 I ended up settling on the [LT1124](https://www.analog.com/en/products/lt1124.html) for the following reasons:
 * The power supply range was ±22V. My goal was to supply the positive rail with +20V and the negative rail with -20V
-* The slew rate can range from 3.9 - 4.5 V/us. To maintain high fidelity audio it is recommended to have a slew rate of 5V/us+. Nevertheless, we can determine the minimum slew rate given the expected output voltage and frequency. Our maximum output voltage should be 10V and our maximum frequency should be around 20kHz (The upper limit of human hearing). Using the slew rate formula ($Slew Rate = 2πfv$) .... ($2 * π * 20000 * 10 = 1.256V/μS$)
-* The Gain-Bandwith product of this op-amp is 12.5 MHz which is more than enough since our operating range is expected to be from 20Hz - 20kHz.
+* The slew rate can range from 3.9 - 4.5 V/us. To maintain high fidelity audio it is recommended to have a slew rate of 5V/us+. Nevertheless, we can determine the minimum slew rate given the expected output voltage and frequency. Our maximum output voltage should be 10V and our maximum frequency should be around 20kHz (The upper limit of human hearing). Using the slew rate formula ($Slew Rate = 2πfv$)
+  * $2 * π * 20000 * 10 = 1.256V/μS$
+* The Gain-Bandwidth product of this op-amp is 12.5 MHz which is more than enough since our operating range is expected to be from 20Hz - 20kHz.
 * The op-amp also specifies low voltage noise typically around $2.7nV/√(Hz)$
-
-## DIODE
-When selecting the diode for this project I had to consider the following:
-* Forward voltage
-* Breakdown voltage
-* Recovery time
-
-I ended up settling on the [1N414](https://www.digikey.ca/en/products/detail/onsemi/1N4148/458603) for the following reasons:
-* The forward voltage of 1V at 10mA allowed me to bias the transistors in such a way that they were always conducting
-* The breakdown voltage of 100V is more than enough headroom that the amplified audio signal will not excedd this limit
-* Finally, the recovery time of 4ns is a relatively fast switching speed which should be more than enough in an audio amplification circuit
 
 ## N-MOSFET
 When selecting the NMOS for this project I had to consider the following:
-*
+* Maximum VDS
+* VGS (Gate to source threshold voltage)
+* Maximum continuous current
+* Maximum power dissipation
+* Thermal characteristics
+* Switching times
+
+I ended up settling on the [IPI80N04S4-03](https://www.infineon.com/cms/en/product/power/mosfet/automotive-mosfet/ipi80n04s4-03/) for the following reasons:
+* The maximum VDS is 40V. According to the LTSpice simulations this gives us plenty of overhead room
+* The gate to source threshold voltage (VGS) is typically 3V
+* The maximum continuous current (ID) is 80A which is far more than we actually need
+* The maximum power dissipation is 94 watts which is also far more than we actually need
+* The turn-on and turn-off delay time of the MOSFET is below 20ns which is relatively fast and should be suitable for this application.
+
+
 
 # Resources
 * LTSPICE
