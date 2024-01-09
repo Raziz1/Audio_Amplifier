@@ -67,6 +67,9 @@ My initial design was based on the class A amplifier design, which can be seen i
   <p align="center"><small><i>LTSPICE Schematic Capture</i></small></p>
 </p>
 
+* For this design, I ended up choosing the LT1124 op-amp for the signal amplifying stage. There were a couple of reasons behind this decision. Initially, I had planned for that stage to use a common emitter amplifier. However, the issue was that it required fine-tuning to determine the bias voltages. Additionally, by using the LT1124 op-amp, I could incorporate a potentiometer for variable gain ranging from 0 to 10dB.
+* For the power stage of this amplifier, I ended up utilizing the op-amp's inverting terminal as a negative feedback loop for the push-pull configuration. This allowed me to avoid fine-tuning the bias voltages with resistors and diodes.
+
 ## Simulation
 <p align="center">
   <img align="center" width="712" height="512" src="./images/Class_AB_Amplifier_Simulation.png">
@@ -125,6 +128,7 @@ I ended up settling on the [IRF9Z24NPBF](https://www.digikey.ca/en/products/deta
 
 # Resources
 * LTSPICE
+* [Amplifier Series](https://www.youtube.com/watch?v=Yv75o45Zrak&list=PL1GmhyN81MlmMcJZy58bTeupRl7zOO8Sk&index=2&ab_channel=EEforEveryone)
 * [Online Circuit Simulator](https://www.falstad.com/circuit/)
 * [Introduction to the Amplifier](https://www.electronics-tutorials.ws/amplifier/amp_1.html)
 * [Audio Amplifier Basics](https://www.youtube.com/watch?v=U0FIG2J6Zls&ab_channel=TexasInstruments)
