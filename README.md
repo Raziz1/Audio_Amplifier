@@ -55,21 +55,26 @@ The second decision was whether to use MOSFETs or BJTs for the power stage ampli
 ### Initial Design
 My initial design was based on the class A amplifier design, which can be seen in the image below. However, the problem was that it drew too much current from the op-amp, and when no signal was fed, the amplifier continued to conduct large amounts of current.
 
+<p align="center">
+  <img align="center" width="712" height="512" src="./images/Class_A_Schematic.png">
+  <p align="center"><small><i>Class A Amplifier Design in LTSPICE</i></small</p>
+</p>
+
 # Design
 ## Schematic
 <p align="center">
-  <img align="center" width="712" height="512" src="./images/Audio_Amplifier_Schematic.png">
+  <img align="center" width="712" height="512" src="./images/Class_AB_Amplifier_Schematic.png">
   <p align="center"><small><i>LTSPICE Schematic Capture</i></small></p>
 </p>
 
 ## Simulation
 <p align="center">
-  <img align="center" width="712" height="512" src="./images/Simulation_Graphs.png">
-  <p align="center"><small><i>[1]Input Voltage [2]Speaker Power Consumption [3]Output Current [4]Output Voltage</i></small</p>
+  <img align="center" width="712" height="512" src="./images/Class_AB_Amplifier_Simulation.png">
+  <p align="center"><small><i>[1]Input Voltage [2]Output Current [3]Output Voltage</i></small</p>
 </p>
 
 <p align="center">
-  <img align="center" width="712" height="512" src="./images/Frequency_Response.png">
+  <img align="center" width="712" height="512" src="./images/Class_AB_Amplifier_Frequency_Response.png">
   <p align="center"><small><i>Circuit Frequency Response 20Hz - 48kHz</i></small</p>
 </p>
   
@@ -89,6 +94,7 @@ I ended up settling on the [IRFZ34NPBF](https://www.digikey.ca/en/products/detai
 * Maximum VDS: 55V
 * Continuous drain current: 29A
 * Maximum power dissipation: 68W
+  * No additional cooling is required since we will not exceed this power rating
 * Gate to source voltage: ±20V
 * Gate threshold voltage: 2-4V
 * RDS(ON): 0.04 ohms
@@ -103,6 +109,7 @@ I ended up settling on the [IRF9Z24NPBF](https://www.digikey.ca/en/products/deta
 * Maximum VDS: -55V
 * Continuous drain current: -12A
 * Maximum power dissipation: 45W
+  * No additional cooling is required since we will not exceed this power rating
 * Gate to source voltage: ±20V
 * Gate threshold voltage: (-2V)-(-4V)
 * RDS(ON): 0.175 ohms
@@ -111,6 +118,8 @@ I ended up settling on the [IRF9Z24NPBF](https://www.digikey.ca/en/products/deta
 * Turn-off delay time: 23ns
 * Fall time: 37ns
 * Input capacitanceL 350pF
+
+*Both MOSFET's chosen are overkill for our purposes but provide sufficient headroom for error and/or future upgrades*
 
 
 
