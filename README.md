@@ -128,23 +128,23 @@ I ended up settling on the [IRF9Z24NPBF](https://www.digikey.ca/en/products/deta
 $Pavg = (Irms^2 * Rds(on))/2$
  * $Irms = Ipeak/√2 = 3A / √2 = 2.12A$
  * Rds(on) = 0.040 ohms
- * $Pavg = (2.12A * 0.04ohms)/2 = 0.0424 W$
+ * $Pavg = (2.12^2A * 0.04ohms)/2 = 0.08988 W$
 $Tj = Pavg * RthJA + TA$
- * $Pavg = 0.0424W$
+ * $Pavg = 0.08988W$
  * $RthJA = 62W/C$
  * $TA = 25C$
- * $Tj = 0.0424W * 62W/C + 25C = 27.62C$
+ * $Tj = 0.08988W * 62W/C + 25C = 30.57C$
 
 ## P-MOSFET Junction Temperature Calculation
 $Pavg = (Irms^2 * Rds(on))/2$
  * $Irms = Ipeak/√2 = 3A / √2 = 2.12A$
  * Rds(on) = 0.175 ohms
- * $Pavg = (2.12A * 0.175ohms)/2 = 0.1855 W$
+ * $Pavg = (2.12^2A * 0.175ohms)/2 = 0.3932W$
 $Tj = Pavg * RthJA + TA$
- * $Pavg = 0.1855W$
+ * $Pavg = 0.3932$
  * $RthJA = 62W/C$
  * $TA = 25C$
- * $Tj = 0.371W * 62W/C + 25C = 36.501C$
+ * $Tj = 0.3932W * 62W/C + 25C = 49.38C$
 
 
 # Resources
