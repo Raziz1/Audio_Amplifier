@@ -139,12 +139,12 @@ $Tj = Pavg * RthJA + TA$
 $Pavg = (Irms^2 * Rds(on))/2$
  * $Irms = Ipeak/√2 = 3A / √2 = 2.12A$
  * Rds(on) = 0.175 ohms
- * $Pavg = (2.12A * 0.175ohms)/2 = 0.371 W$
+ * $Pavg = (2.12A * 0.175ohms)/2 = 0.1855 W$
 $Tj = Pavg * RthJA + TA$
- * $Pavg = 0.371W$
+ * $Pavg = 0.1855W$
  * $RthJA = 62W/C$
  * $TA = 25C$
- * $Tj = 0.371W * 62W/C + 25C = 48.002C$
+ * $Tj = 0.371W * 62W/C + 25C = 36.501C$
 
 
 # Resources
