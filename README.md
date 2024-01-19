@@ -80,7 +80,9 @@ My initial design was based on the class A amplifier design, which can be seen i
   <img align="center" width="712" height="512" src="./images/Class_AB_Amplifier_Frequency_Response.png">
   <p align="center"><small><i>Circuit Frequency Response 20Hz - 48kHz</i></small</p>
 </p>
-  
+
+* For the spice simulation of the MOSFETs, custom models were obtained online through Infineon's website. The custom models can be found in the *spice_models* folder.
+
 # Parts
 ## OP-AMP
 I ended up settling on the [LT1124](https://www.analog.com/en/products/lt1124.html)
@@ -129,6 +131,7 @@ $Pavg = (Irms^2 * Rds(on))/2$
  * $Irms = Ipeak/√2 = 3A / √2 = 2.12A$
  * Rds(on) = 0.040 ohms
  * $Pavg = (2.12^2A * 0.04ohms)/2 = 0.08988 W$
+
 $Tj = Pavg * RthJA + TA$
  * $Pavg = 0.08988W$
  * $RthJA = 62W/C$
@@ -140,12 +143,31 @@ $Pavg = (Irms^2 * Rds(on))/2$
  * $Irms = Ipeak/√2 = 3A / √2 = 2.12A$
  * Rds(on) = 0.175 ohms
  * $Pavg = (2.12^2A * 0.175ohms)/2 = 0.3932W$
+ 
 $Tj = Pavg * RthJA + TA$
  * $Pavg = 0.3932$
  * $RthJA = 62W/C$
  * $TA = 25C$
  * $Tj = 0.3932W * 62W/C + 25C = 49.38C$
 
+Based on the above calculations the MOSFETs shouldn't require any additional cooling methods.
+
+## Power Supply Consideration
+This design requires a positive and negative supply of 20V. This can be done using two power supplies and setting the ground references appropriately as described in this website ([Get a positive and negative voltage output from power supply](https://forum.digikey.com/t/get-a-positive-and-negative-voltage-output-from-power-supply/10593)). Alternatively, I have created another design that uses a single 40V DC power supply. As seen in the schematic below, the voltage/signal amplifier and current/power amplifier remain the same. The key difference is that now the power rails are supplied by the LTM8027 DC/DC voltage regulator. The configuration of each regulator allows it to take an input of 40V and supply the top rail with 20V (4A) and the bottom rail with -20V(4A). According to the LTSpice simulation this circuit should function similarly to the original design. Additionally, the LTM8027 has a maximum switching speed of 500kHz so the frequency shouldn't be affected. <i>NOTE A split power supply design could be used however the appropriate regulators must be chosen so that the voltage rails under load remain stable</i>
+
+### Single Supply Schematic 
+<p align="center">
+  <img align="center" width="712" height="512" src="./images/Class_AB_Single_Supply_Schematic.png">
+  <p align="center"><small><i>LTSPICE Schematic Capture</i></small></p>
+</p>
+
+### Single Supply Simulation
+<p align="center">
+  <img align="center" width="712" height="512" src="./images/Class_AB_Single_Supply_Simulation.png">
+  <p align="center"><small><i>[1]Output Voltage [2]Output Current [3]Output Power [4]Positive Power Supply Rail</i></small></p>
+</p>
+
+# PCB
 
 # Resources
 * LTSPICE
