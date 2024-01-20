@@ -13,9 +13,9 @@ The goal of this project was to design a simple audio amplifier to drive a 4-ohm
 - [x] Pick amplifier class
 - [x] Pick power stage amplifier
 - [x] Design and simulate in LTSPICE
-- [ ] Pick components with appropriate ratings
-- [ ] Determine thermal output of transistors
-- [ ] PCB design
+- [x] Pick components with appropriate ratings
+- [x] Determine thermal output of transistors
+- [x] PCB design
 - [ ] Testing
 
 ## History 📃
@@ -168,6 +168,22 @@ This design requires a positive and negative supply of 20V. This can be done usi
 </p>
 
 # PCB
+
+## 3D View 
+<p align="center">
+  <img align="center" width="712" height="512" src="./images/Audio_Amplifier_Render.png">
+  <p align="center"><small><i>3D Audio Amplifier Render</i></small></p>
+</p>
+
+* One of the key considerations during this design was the use of power and ground planes. In this design, I settled on a 2 layer board design because it was cheap and simple to design. The layers are relatively thick to allow for large amounts of current to pass through the traces. However, the board might have benefited from a +20V, -20V, and GND planes. This would help dissipate heat better and reduce electromagnetic interference. 
+
+## Power Integrity
+<p align="center">
+  <img align="center" width="712" height="512" src=".\pcb\Audio_Amplifier [PDNA]_2024-01-20_15.00\Images\7325b7f2-6679-43e4-a6ba-8f5da0a1302c.png">
+  <p align="center"><small><i>Power Analyzer by Keysight - Altium</i></small></p>
+</p>
+
+* I used the Saturn PCB Design Toolkit to determine the amount of current that the VIAs could handle. Based on power integrity simulations, the VIAs were more than capable of meeting the current requirements. Nevertheless, I ended up adding extra headroom for the current by increasing both the trace width and PCB thickness.
 
 # Resources
 * LTSPICE

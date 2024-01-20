@@ -1,0 +1,422 @@
+UNITS=MM
+#
+#Component attribute names
+#
+@0 .comp_mount_type
+@1 .comp_height
+
+# CMP 0
+CMP 5 54.07500234 45.19999596 0 N U1 LT1124CS8#PBF ;0=1,1=1.7600
+PRP Channels_(#) '2'
+PRP ComponentLink1Description 'Manufacturer URL'
+PRP ComponentLink1URL 'http://www.linear.com/'
+PRP ComponentLink2Description 'Datasheet'
+PRP ComponentLink2URL 'http://cds.linear.com/docs/en/datasheet/11245fe.pdf'
+PRP ComponentLink3Description 'Package Specification'
+PRP ComponentLink3URL 'http://cds.linear.com/docs/en/packaging/05081610_G_SO8.pdf'
+PRP DatasheetVersion 'Rev. E'
+PRP GBW_(MHz)_Typical '12.5'
+PRP Is_(mA)_Typical '2.3'
+PRP Linear_Technology_Part_Number 'LT1124-1'
+PRP Manufacturer 'Linear Technology'
+PRP Mounting_Technology 'Surface Mount'
+PRP PackageDescription '8-Pin Plastic Small Outline, Body 4.9 x 3.9 mm, Pitch 1.27 mm'
+PRP PackageReference 'LT-S8-8'
+PRP PackageVersion 'Rev G'
+PRP PartNumber 'LT1124CS8#PBF'
+PRP RevisionNote 'URLs updated'
+PRP RoHS 'Pb-Free'
+PRP SR_(V/us)_Typical '4.5'
+PRP Type 'VFB'
+PRP Vos_(mV)_Typical '0.02'
+PRP Vs_Max_(V) '44'
+PRP Vs_Min_(V) '8'
+TOP 0 51.62500216 47.10499596 270 N 9 6 1
+TOP 1 51.62500216 45.83499596 270 N 2 10 2
+TOP 2 51.62500216 44.56499596 270 N 4 5 3
+TOP 3 51.62500216 43.29499596 270 N 10 11 4
+TOP 4 56.52500252 43.29499596 270 N 7 6 5
+TOP 5 56.52500252 44.56499596 270 N 3 10 6
+TOP 6 56.52500252 45.83499596 270 N 4 6 7
+TOP 7 56.52500252 47.10499596 270 N 5 7 8
+#
+# CMP 1
+CMP 3 45.22500226 47.14999714 0 N R5 RC1608F1501CS ;0=1,1=4.2100
+PRP Case/Package '0603'
+PRP Composition 'Thick Film'
+PRP Contact_Plating 'Tin'
+PRP Depth '0.8mm'
+PRP Lead_Free 'Lead Free'
+PRP Length '1.6mm'
+PRP Max_Operating_Temperature '155°C'
+PRP Military_Standard 'Not'
+PRP Min_Operating_Temperature '-55°C'
+PRP Packaging 'Tape and Reel'
+PRP Power_Rating '100mW'
+PRP Radiation_Hardening 'No'
+PRP Resistance '1.5kR'
+PRP Temperature_Coefficient '100ppm/°C'
+PRP Tolerance '1%'
+PRP Voltage_Rating_(DC) '50V'
+PRP Width '800um'
+TOP 0 44.47375662 47.14999714 0 N 11 2 1
+TOP 1 45.97625044 47.14999714 0 N 9 5 2
+#
+# CMP 2
+CMP 1 69.92500366 34.62499806 90 N R4 CRCW120610K0FKEA ;0=1,1=4.2100
+PRP Case_Code_(Imperial) '1206'
+PRP Case_Code_(Metric) '3216'
+PRP Case/Package '1206'
+PRP Composition 'Thick Film'
+PRP Contact_Plating 'Tin'
+PRP Depth '1.6mm'
+PRP Features 'Automotive AEC-Q200'
+PRP Height '0.55mm'
+PRP Lead_Free 'Lead Free'
+PRP Length '3.2mm'
+PRP Max_Operating_Temperature '155°C'
+PRP Max_Power_Dissipation '250mW'
+PRP Military_Standard 'Not'
+PRP Min_Operating_Temperature '-55°C'
+PRP Number_of_Pins '2'
+PRP Number_of_Terminations '2'
+PRP Package_Quantity '10'
+PRP Packaging 'Tape and Reel'
+PRP Power_Rating '250mW'
+PRP Radiation_Hardening 'No'
+PRP Resistance '10kR'
+PRP Temperature_Coefficient '100ppm/°C'
+PRP Termination 'SMD/SMT'
+PRP Tolerance '1%'
+PRP Voltage_Rating '200V'
+PRP Voltage_Rating_(DC) '200V'
+PRP Weight '0.000353oz'
+PRP Width '0.063inch'
+PRP Working_Voltage '200V'
+TOP 0 69.92500366 35.95108126 90 N 2 9 1
+TOP 1 69.92500366 33.29891486 90 N 6 6 2
+#
+# CMP 3
+CMP 1 69.90000244 48.52499566 90 N R3 CRCW120610K0FKEA ;0=1,1=4.2100
+PRP Case_Code_(Imperial) '1206'
+PRP Case_Code_(Metric) '3216'
+PRP Case/Package '1206'
+PRP Composition 'Thick Film'
+PRP Contact_Plating 'Tin'
+PRP Depth '1.6mm'
+PRP Features 'Automotive AEC-Q200'
+PRP Height '0.55mm'
+PRP Lead_Free 'Lead Free'
+PRP Length '3.2mm'
+PRP Max_Operating_Temperature '155°C'
+PRP Max_Power_Dissipation '250mW'
+PRP Military_Standard 'Not'
+PRP Min_Operating_Temperature '-55°C'
+PRP Number_of_Pins '2'
+PRP Number_of_Terminations '2'
+PRP Package_Quantity '10'
+PRP Packaging 'Tape and Reel'
+PRP Power_Rating '250mW'
+PRP Radiation_Hardening 'No'
+PRP Resistance '10kR'
+PRP Temperature_Coefficient '100ppm/°C'
+PRP Termination 'SMD/SMT'
+PRP Tolerance '1%'
+PRP Voltage_Rating '200V'
+PRP Voltage_Rating_(DC) '200V'
+PRP Weight '0.000353oz'
+PRP Width '0.063inch'
+PRP Working_Voltage '200V'
+TOP 0 69.90000244 49.85107886 90 N 8 6 1
+TOP 1 69.90000244 47.19891246 90 N 3 9 2
+#
+# CMP 4
+CMP 4 55.3500036 49.5249962 0 N R2 RC2012F102CS ;0=1,1=4.2100
+PRP Case_Code_(Imperial) '0805'
+PRP Case_Code_(Metric) '2012'
+PRP Case/Package '0805'
+PRP Composition 'Thick Film'
+PRP Contact_Plating 'Tin'
+PRP Depth '1.25mm'
+PRP Features 'Moisture Resistant'
+PRP Height '0.024inch'
+PRP Lead_Free 'Lead Free'
+PRP Length '0.079inch'
+PRP Max_Operating_Temperature '155°C'
+PRP Max_Power_Dissipation '125mW'
+PRP Military_Standard 'Not'
+PRP Min_Operating_Temperature '-55°C'
+PRP Number_of_Terminations '2'
+PRP Packaging 'Tape and Reel'
+PRP Radiation_Hardening 'No'
+PRP Resistance '1kR'
+PRP Temperature_Coefficient '100ppm/°C'
+PRP Tolerance '1%'
+PRP Voltage_Rating_(DC) '150V'
+PRP Width '0.049inch'
+TOP 0 54.20000336 49.5249962 0 N 1 10 1
+TOP 1 56.50000384 49.5249962 0 N 5 6 2
+#
+# CMP 5
+CMP 9 59.0250026 60.04999928 0 N R1 P090S-14T20BR10K ;0=1,1=4.2100
+PRP Actuator_Diameter '0.236_(6.00mm)'
+PRP Actuator_Length '0.787_(20.00mm)'
+PRP Actuator_Type 'Knurled'
+PRP Adjustment_Type 'TopAdjustment'
+PRP Built_in_Switch 'Detent'
+PRP Bushing_Thread '-'
+PRP Category 'Potentiometers,VariableResistors'
+PRP Datasheet_URL 'http://www.bitechnologies.com/pdfs/p090.pdf'
+PRP Datasheet_Version '07/2008'
+PRP Family 'RotaryPotentiometers,Rheostats'
+PRP Manufacturer 'BI Technologies'
+PRP Manufacturer_URL 'http://www.bi-technologies.net/'
+PRP Mounting_Technology 'ThroughHole'
+PRP Mounting_Type 'ThroughHole'
+PRP Number_of_Gangs '1'
+PRP Number_of_Turns '1'
+PRP Online_Catalog 'P090Series'
+PRP Other_Names '987-1277P090S14T20BR10K'
+PRP Package_Description 'POT, 3-Leads, Body 9.8 x 12.5 mm, Pitch 2.5 mm'
+PRP Package_Reference 'POT-3'
+PRP Package_URL 'http://www.bitechnologies.com/pdfs/p090.pdf'
+PRP Packaging 'Tray'
+PRP Power_(Watts) '0.03W,1/32W'
+PRP Power_Rating '0.03W'
+PRP Resistance_(Ohms) '10k'
+PRP Resistive_Material 'ConductivePlastic'
+PRP Rotation '280°'
+PRP Series 'P090'
+PRP Standard_Package '1'
+PRP Taper 'Linear'
+PRP Temperature_Coefficient '-'
+PRP Termination_Style 'PCBPins,BoardLocks'
+PRP Tolerance '±20%'
+TOP 0 56.52500252 53.04999804 0 N 5 5 1
+TOP 1 59.0250026 53.04999804 0 N 0 0 2
+TOP 2 61.52500268 53.04999804 0 N 4 4 3
+TOP 3 54.67500368 60.04999928 0 N 0 1 MP1
+TOP 4 63.37500152 60.04999928 0 N 0 2 MP2
+#
+# CMP 6
+CMP 10 75.2500019 33.3349981 270 N Q2 IRF9Z24NPBF ;0=2,1=4.2100
+PRP Arrow_Part_Number 'IRF9Z24NPBF'
+PRP Arrow_Price/Stock 'https://www.arrow.com/en/products/irf9z24npbf/infineon-technologies-ag?region=nac'
+PRP Case/Package ''
+PRP Datasheet_Link 'https://www.infineon.com/dgdl/irf9z24npbf.pdf?fileId=5546d462533600a40153561218961ddb'
+PRP Design_Item_ID 'IRF9Z24NPBF'
+PRP Frequency ''
+PRP Geometry.Height '4.69mm'
+PRP Manufacturer_Name 'Infineon'
+PRP Manufacturer_Part_Number 'IRF9Z24NPBF'
+PRP Max_Operating_Temperature ''
+PRP Min_Operating_Temperature ''
+PRP Mounting_Technology ''
+PRP Mouser_Part_Number '942-IRF9Z24NPBF'
+PRP Mouser_Price/Stock 'https://www.mouser.co.uk/ProductDetail/Infineon-IR/IRF9Z24NPBF?qs=9%252BKlkBgLFf36xC9PMFW8Lg%3D%3D'
+PRP Nominal_Dual_Supply ''
+PRP Nominal_Vgs ''
+PRP Pins ''
+PRP Power ''
+PRP RoHS_Compliant ''
+PRP Source 'IRF9Z24NPBF.SchLib'
+PRP Transistor_Type ''
+PRP Vgs_(Max) ''
+PRP Vgs(th)_(Max)_@_Id ''
+TOP 0 75.2500019 33.3349981 270 N 6 5 1
+TOP 1 75.2500019 35.8749981 270 N 2 7 2
+TOP 2 75.2500019 38.4149981 270 N 10 10 3
+#
+# CMP 7
+CMP 2 74.37500238 47.29999684 0 N Q1 IRFZ34NPBF ;0=2,1=4.2100
+PRP Case/Package 'TO-220'
+PRP Contact_Plating 'Tin'
+PRP Continuous_Drain_Current_(ID) '29A'
+PRP Drain_to_Source_Breakdown_Voltage '55V'
+PRP Drain_to_Source_Resistance '40mR'
+PRP Drain_to_Source_Voltage_(Vdss) '55V'
+PRP Element_Configuration 'Single'
+PRP Gate_to_Source_Voltage_(Vgs) '20V'
+PRP Halogen_Free 'Not Halogen Free'
+PRP Height '0.6inch'
+PRP Input_Capacitance '700pF'
+PRP Lead_Free 'Lead Free'
+PRP Length '0.414inch'
+PRP Max_Dual_Supply_Voltage '55V'
+PRP Max_Operating_Temperature '175°C'
+PRP Max_Power_Dissipation '68W'
+PRP Min_Operating_Temperature '-55°C'
+PRP Mount 'Through Hole'
+PRP Number_of_Pins '3'
+PRP Packaging 'Rail/Tube'
+PRP Power_Dissipation '68W'
+PRP Rds_On_Max '40mR'
+PRP REACH_SVHC 'No SVHC'
+PRP Rise_Time '49ns'
+PRP RoHS_Compliant 'Yes'
+PRP Threshold_Voltage '4V'
+PRP Turn-Off_Delay_Time '31ns'
+PRP Turn-On_Delay_Time '7ns'
+PRP Width '0.185inch'
+TOP 0 73.67000252 49.83999684 0 N 8 5 1
+TOP 1 73.67000252 47.29999684 0 N 3 7 2
+TOP 2 73.67000252 44.75999684 0 N 10 9 3
+#
+# CMP 8
+CMP 7 84.95000282 40.99999674 270 N J3 1729128 ;0=2,1=10.0130
+PRP Current_Rating '13500mA'
+PRP Datasheet_URL 'https://datasheet.ciiva.com/16046/1729128-16046181.pdf'
+PRP Datasheet_Version '12/2013'
+PRP Manufacturer 'Phoenix Contact'
+PRP Manufacturer_URL 'http://www.phoenixcontact.com/'
+PRP Mounting_Technology 'ThroughHole'
+PRP No._of_Positions '2'
+PRP No._of_Rows '1'
+PRP Orientation 'Horizontal'
+PRP Package_Description '2-Pin Through Hole Device, Body 8.1 x 10.16 mm, Pitch 5.08 mm'
+PRP Package_Reference '1729128-2'
+PRP Package_URL 'https://www.phoenixcontact.com/online/portal/pi/pxc/product_detail_page/!ut/p/b1/3VdJjqNKFDxLH8AFycySyWY2ozFsEPOMMQaDOX1XedGL_1Vdm5YXJleknhSKeBkvI6EA8ncAo3AYoDhBQGco6KN7VURTdemj9us_IEKEZo_YHiPAEWEFmDGOHMORkqKYCORBZxgL7ZoaZYcbFFUZ3fqxSY6GOuxydWUuHqz1ynmMFygu583Bob0Ewr6Sd_l-5m-kAueHiB0jpRwZwe58wwtkpxtMYd_LmGcDRU02dRNEyWt6Y2ti5pSyJ_reIkzIulrqApdnbT11V5jnCKbYNCvhEM1MCpPByat_X379-iThf08CI5GfOPqfBeS3BRoBOdD55AKVv0iLwCMq-2BrzXWSGRH7pUGD9uwXQjiph3xL0DKQwdGa0JImiIOmBNOestqgwTHSSs2oOep-78apyXQBvNi8ZLaFjvjWvcaUEBu0MC6Wbe-d6mB0FAebo2lUWinqYaZs5DAYzV0RP9yitUjnGJ0iI9xhZkT42OCQNUJJhkgWINNQLP2JFP6OpMg3JCVg70jqHT0lvKOnhHf0lPuOnnLf0VPuWx6_dxwUIvwk5WMkT0kLL1mh61l2yZVSzG3pYV_bqo-mj6uMKwKwdnnW8Jh5RTOJzMOA5c-eJDaZQw4mTMPH02PvS_ZAqNVjVTo2WyYLkwH_KU1mmmG5kjRhDqPXLwwVHvVOjCM60-fpXvTDfMGW1PVFVS1r4e4yVDk4ZdNbkUHvqPqQSeian4UD39fNKmachqdJ1NJbyk8rXT9mXTvPk3oE5meulKGgiruPJek-4I9hTT6G8ZLOyRSm2RRVbThERQad5OS28hdt4YW4vG0stgYYzsWsK4_7y6DZMjJSCqri1kyiZR5vD7pwIrNR7QwPHTcLTI5qT7eRlpHrdGiupYlqQDJ7zy_CND8fWWBoLRXxk1RVcXiBQwbTD4Xi7KL-FuO94t9xaqweXzH'
+PRP Package_Version '03/2015'
+PRP Packing 'Bulk'
+PRP PartNumber '1729128'
+PRP Pitch '5.08mm'
+PRP RoHS 'TRUE'
+PRP Voltage_Rating '400V'
+TOP 0 84.95000282 38.45999674 90 N 10 8 1
+TOP 1 84.95000282 43.53999674 90 N 1 8 2
+#
+# CMP 9
+CMP 8 34.60000192 41.84999758 90 N J2 1729128 ;0=2,1=10.0130
+PRP Current_Rating '13500mA'
+PRP Datasheet_URL 'https://datasheet.ciiva.com/16046/1729128-16046181.pdf'
+PRP Datasheet_Version '12/2013'
+PRP Manufacturer 'Phoenix Contact'
+PRP Manufacturer_URL 'http://www.phoenixcontact.com/'
+PRP Mounting_Technology 'ThroughHole'
+PRP No._of_Positions '2'
+PRP No._of_Rows '1'
+PRP Orientation 'Horizontal'
+PRP Package_Description '2-Pin Through Hole Device, Body 8.1 x 10.16 mm, Pitch 5.08 mm'
+PRP Package_Reference '1729128-2'
+PRP Package_URL 'https://www.phoenixcontact.com/online/portal/pi/pxc/product_detail_page/!ut/p/b1/3VdJjqNKFDxLH8AFycySyWY2ozFsEPOMMQaDOX1XedGL_1Vdm5YXJleknhSKeBkvI6EA8ncAo3AYoDhBQGco6KN7VURTdemj9us_IEKEZo_YHiPAEWEFmDGOHMORkqKYCORBZxgL7ZoaZYcbFFUZ3fqxSY6GOuxydWUuHqz1ynmMFygu583Bob0Ewr6Sd_l-5m-kAueHiB0jpRwZwe58wwtkpxtMYd_LmGcDRU02dRNEyWt6Y2ti5pSyJ_reIkzIulrqApdnbT11V5jnCKbYNCvhEM1MCpPByat_X379-iThf08CI5GfOPqfBeS3BRoBOdD55AKVv0iLwCMq-2BrzXWSGRH7pUGD9uwXQjiph3xL0DKQwdGa0JImiIOmBNOestqgwTHSSs2oOep-78apyXQBvNi8ZLaFjvjWvcaUEBu0MC6Wbe-d6mB0FAebo2lUWinqYaZs5DAYzV0RP9yitUjnGJ0iI9xhZkT42OCQNUJJhkgWINNQLP2JFP6OpMg3JCVg70jqHT0lvKOnhHf0lPuOnnLf0VPuWx6_dxwUIvwk5WMkT0kLL1mh61l2yZVSzG3pYV_bqo-mj6uMKwKwdnnW8Jh5RTOJzMOA5c-eJDaZQw4mTMPH02PvS_ZAqNVjVTo2WyYLkwH_KU1mmmG5kjRhDqPXLwwVHvVOjCM60-fpXvTDfMGW1PVFVS1r4e4yVDk4ZdNbkUHvqPqQSeian4UD39fNKmachqdJ1NJbyk8rXT9mXTvPk3oE5meulKGgiruPJek-4I9hTT6G8ZLOyRSm2RRVbThERQad5OS28hdt4YW4vG0stgYYzsWsK4_7y6DZMjJSCqri1kyiZR5vD7pwIrNR7QwPHTcLTI5qT7eRlpHrdGiupYlqQDJ7zy_CND8fWWBoLRXxk1RVcXiBQwbTD4Xi7KL-FuO94t9xaqweXzH'
+PRP Package_Version '03/2015'
+PRP Packing 'Bulk'
+PRP PartNumber '1729128'
+PRP Pitch '5.08mm'
+PRP RoHS 'TRUE'
+PRP Voltage_Rating '400V'
+TOP 0 34.60000192 44.38999758 270 N 3 8 1
+TOP 1 34.60000192 39.30999758 270 N 2 8 2
+#
+# CMP 10
+CMP 7 46.92500394 56.89999796 180 N J1 1729128 ;0=2,1=10.0130
+PRP Current_Rating '13500mA'
+PRP Datasheet_URL 'https://datasheet.ciiva.com/16046/1729128-16046181.pdf'
+PRP Datasheet_Version '12/2013'
+PRP Manufacturer 'Phoenix Contact'
+PRP Manufacturer_URL 'http://www.phoenixcontact.com/'
+PRP Mounting_Technology 'ThroughHole'
+PRP No._of_Positions '2'
+PRP No._of_Rows '1'
+PRP Orientation 'Horizontal'
+PRP Package_Description '2-Pin Through Hole Device, Body 8.1 x 10.16 mm, Pitch 5.08 mm'
+PRP Package_Reference '1729128-2'
+PRP Package_URL 'https://www.phoenixcontact.com/online/portal/pi/pxc/product_detail_page/!ut/p/b1/3VdJjqNKFDxLH8AFycySyWY2ozFsEPOMMQaDOX1XedGL_1Vdm5YXJleknhSKeBkvI6EA8ncAo3AYoDhBQGco6KN7VURTdemj9us_IEKEZo_YHiPAEWEFmDGOHMORkqKYCORBZxgL7ZoaZYcbFFUZ3fqxSY6GOuxydWUuHqz1ynmMFygu583Bob0Ewr6Sd_l-5m-kAueHiB0jpRwZwe58wwtkpxtMYd_LmGcDRU02dRNEyWt6Y2ti5pSyJ_reIkzIulrqApdnbT11V5jnCKbYNCvhEM1MCpPByat_X379-iThf08CI5GfOPqfBeS3BRoBOdD55AKVv0iLwCMq-2BrzXWSGRH7pUGD9uwXQjiph3xL0DKQwdGa0JImiIOmBNOestqgwTHSSs2oOep-78apyXQBvNi8ZLaFjvjWvcaUEBu0MC6Wbe-d6mB0FAebo2lUWinqYaZs5DAYzV0RP9yitUjnGJ0iI9xhZkT42OCQNUJJhkgWINNQLP2JFP6OpMg3JCVg70jqHT0lvKOnhHf0lPuOnnLf0VPuWx6_dxwUIvwk5WMkT0kLL1mh61l2yZVSzG3pYV_bqo-mj6uMKwKwdnnW8Jh5RTOJzMOA5c-eJDaZQw4mTMPH02PvS_ZAqNVjVTo2WyYLkwH_KU1mmmG5kjRhDqPXLwwVHvVOjCM60-fpXvTDfMGW1PVFVS1r4e4yVDk4ZdNbkUHvqPqQSeian4UD39fNKmachqdJ1NJbyk8rXT9mXTvPk3oE5meulKGgiruPJek-4I9hTT6G8ZLOyRSm2RRVbThERQad5OS28hdt4YW4vG0stgYYzsWsK4_7y6DZMjJSCqri1kyiZR5vD7pwIrNR7QwPHTcLTI5qT7eRlpHrdGiupYlqQDJ7zy_CND8fWWBoLRXxk1RVcXiBQwbTD4Xi7KL-FuO94t9xaqweXzH'
+PRP Package_Version '03/2015'
+PRP Packing 'Bulk'
+PRP PartNumber '1729128'
+PRP Pitch '5.08mm'
+PRP RoHS 'TRUE'
+PRP Voltage_Rating '400V'
+TOP 0 49.46500394 56.89999796 0 N 1 7 1
+TOP 1 44.38500394 56.89999796 0 N 11 1 2
+#
+# CMP 11
+CMP 6 66.07500374 36.44999568 90 N D2 1N4148 ;0=2,1=1.8500
+PRP Cd '4 pF Max.'
+PRP ComponentLink1Description 'Manufacturer URL'
+PRP ComponentLink1URL 'http://www.nxp.com/'
+PRP ComponentLink2Description 'Datasheet'
+PRP ComponentLink2URL 'http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf'
+PRP ComponentLink3Description 'Package Specification'
+PRP ComponentLink3URL 'http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf'
+PRP Configuration 'Single'
+PRP DatasheetVersion 'Aug-04'
+PRP IF '200 mA Max.'
+PRP IFRM '450 mA'
+PRP IFSM '4 A Max.'
+PRP IR_(VR '20 V)=25 nA'
+PRP Manufacturer 'NXP Semiconductors'
+PRP Mounting_Technology 'Through Hole'
+PRP PackageDescription '2-Pin Hermetically Sealed Glass Package, Axial Leaded, Dia 1.85 mm, Body Length 4.25 mm, Lead Spread 25.4 mm'
+PRP PackageReference 'SOD27'
+PRP PackageVersion 'Aug-04'
+PRP PartNumber '1N4148'
+PRP RoHS 'TRUE'
+PRP Trr '4 ns Max.'
+PRP VF_(IF '10 mA)=1 V'
+PRP VR '100 V Max.'
+TOP 0 66.07500374 40.94999684 90 N 7 5 1
+TOP 1 66.07500374 31.94999452 90 N 6 4 2
+#
+# CMP 12
+CMP 6 66.05000252 47.72499726 90 N D1 1N4148 ;0=2,1=1.8500
+PRP Cd '4 pF Max.'
+PRP ComponentLink1Description 'Manufacturer URL'
+PRP ComponentLink1URL 'http://www.nxp.com/'
+PRP ComponentLink2Description 'Datasheet'
+PRP ComponentLink2URL 'http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf'
+PRP ComponentLink3Description 'Package Specification'
+PRP ComponentLink3URL 'http://www.nxp.com/documents/data_sheet/1N4148_1N4448.pdf'
+PRP Configuration 'Single'
+PRP DatasheetVersion 'Aug-04'
+PRP IF '200 mA Max.'
+PRP IFRM '450 mA'
+PRP IFSM '4 A Max.'
+PRP IR_(VR '20 V)=25 nA'
+PRP Manufacturer 'NXP Semiconductors'
+PRP Mounting_Technology 'Through Hole'
+PRP PackageDescription '2-Pin Hermetically Sealed Glass Package, Axial Leaded, Dia 1.85 mm, Body Length 4.25 mm, Lead Spread 25.4 mm'
+PRP PackageReference 'SOD27'
+PRP PackageVersion 'Aug-04'
+PRP PartNumber '1N4148'
+PRP RoHS 'TRUE'
+PRP Trr '4 ns Max.'
+PRP VF_(IF '10 mA)=1 V'
+PRP VR '100 V Max.'
+TOP 0 66.05000252 52.22499842 90 N 8 4 1
+TOP 1 66.05000252 43.2249961 90 N 7 4 2
+#
+# CMP 13
+CMP 0 48.40000226 48.52499566 270 N C1 C1206C102K4RACTU ;0=1,1=4.2100
+PRP Automotive 'Yes'
+PRP Automotive_Grade 'Grade 0'
+PRP Capacitance '1,000 pF'
+PRP Category 'Cap'
+PRP ComponentLink2Description 'Datasheet'
+PRP ComponentLink2URL 'https://content.kemet.com/datasheets/KEM_C1007_X8R_ULTRA_150C_SMD.pdf'
+PRP Device_Class_L1 'Passive Components'
+PRP Device_Class_L2 'Capacitors'
+PRP Device_Class_L3 'Ceramic Capacitors'
+PRP Digikey_Description 'CAP CER 1000PF 16V 10% X7R 1206'
+PRP Height '0.88mm'
+PRP Ipc_Land_Pattern_Name 'CAPC320160X78'
+PRP Lead_Free 'Yes'
+PRP Manufacturer 'KEMET'
+PRP Manufacturer_Part_Number 'C1206C102K4RACTU'
+PRP Material 'Ceramic'
+PRP Mouser_Description 'Cap Ceramic 0.001uF 16V X7R 10% Pad SMD 1206 125C T/R'
+PRP Octopart 'https://octopart.com/c1206c102k4ractu-kemet-19050577'
+PRP Package 'C1206C-EB'
+PRP RoHS 'TRUE'
+PRP Temperature '-55°C to +150°C'
+PRP Temperature_Characteristic 'X7R'
+PRP Temperature_Coefficient '15%'
+PRP Temperature_Range_High '+150°C'
+PRP Temperature_Range_Low '-55°C'
+PRP Tolerance '0.1'
+PRP Value '1,000 pF'
+PRP Voltage_Rating '16 V'
+TOP 0 48.40000226 47.12499592 270 N 9 4 1
+TOP 1 48.40000226 49.9249954 270 N 1 9 2
+#

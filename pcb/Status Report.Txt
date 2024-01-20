@@ -1,0 +1,9 @@
+Output: Save As/Export Schematic
+Type  : Universal Exporter
+From  : Schematic Document [Audio_Amplifier.SchDoc]
+
+
+Files Generated   : 0
+Documents Printed : 0
+
+Finished Output Generation At 3:25:08 PM On 2024-01-20

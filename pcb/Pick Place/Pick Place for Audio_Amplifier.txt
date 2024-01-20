@@ -1,0 +1,27 @@
+Altium Designer Pick and Place Locations
+C:\Users\Public\Documents\Altium\Audio_Amplifier\Project Outputs for Free Documents\Pick Place\Pick Place for Audio_Amplifier.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       20-01-24
+Time:       15:24
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment          Layer    Footprint              Center-X(mil) Center-Y(mil) Rotation Description                                                                                                                                                                             
+U1         LT1124CS8#PBF    TopLayer LT-S8-8_M              2128.937      1779.527      0        "Dual Channel, Rotated Pinout, Low Noise Precision Operational Amplifier, Low 1/f Corner, 12.5 MHz Typical GBW, 4.5 V/us Typical SR, 8 to 44 V, 8-Pin SOIC (S8-8), Commercial, Pb-Free" 
+R5         RC1608F1501CS    TopLayer FP-RC1608-IPC_B        1780.512      1856.299      0        "Res Thick Film 0603 1.5kO 1% 0.1W ±100ppm/°C Molded SMD T/R"                                                                                                                           
+R4         CRCW120610K0FKEA TopLayer FP-CRCW1206-e3-IPC_C   2752.953      1363.189      270      "RES Thick Film, 10kO, 1%, 0.25W, 100ppm/°C, 1206"                                                                                                                                      
+R3         CRCW120610K0FKEA TopLayer FP-CRCW1206-e3-IPC_C   2751.969      1910.433      270      "RES Thick Film, 10kO, 1%, 0.25W, 100ppm/°C, 1206"                                                                                                                                      
+R2         RC2012F102CS     TopLayer FP-RC2012-MFG          2179.134      1949.803      0        "Res Thick Film 0805 1kO 1% 0.125W ±100ppm/°C Molded SMD T/R"                                                                                                                           
+R1         P090S-14T20BR10K TopLayer RES-POT-3              2323.819      2226.378      0        "9 mm Rotary Potentiometer, Insulated Shaft, Conductive Plastic Element, 10 KOhm, -20 to 70 degC, 3-Pin THD, RoHS, Tray"                                                                
+Q2         IRF9Z24NPBF      TopLayer TO254P469X1042X1967-3P 2962.599      1412.401      90       "Infineon IRF9Z24NPBF P-channel MOSFET Transistor, 12 A, 55 V, 3-Pin TO-220AB"                                                                                                          
+Q1         IRFZ34NPBF       TopLayer FP-PG-TO220-3-MFG      2900.394      1862.205      0        "MOSFET N-CH 55V 29A TO220AB"                                                                                                                                                           
+J3         1729128          TopLayer PHOE-1729128-2_V       3344.488      1614.173      90       "PCB Terminal Block, 13.5 A, 400 V, 2-Pin THD, RoHS, Bulk"                                                                                                                              
+J2         1729128          TopLayer PHOE-1729128-2_V       1362.205      1647.638      270      "PCB Terminal Block, 13.5 A, 400 V, 2-Pin THD, RoHS, Bulk"                                                                                                                              
+J1         1729128          TopLayer PHOE-1729128-2_V       1847.441      2240.157      180      "PCB Terminal Block, 13.5 A, 400 V, 2-Pin THD, RoHS, Bulk"                                                                                                                              
+D2         1N4148           TopLayer NXP-SOD27-2_V          2601.378      1435.039      270      "High-speed Diode, 100 V, 450 mA, 2-Pin SOD27, RoHS"                                                                                                                                    
+D1         1N4148           TopLayer NXP-SOD27-2_V          2600.394      1878.937      270      "High-speed Diode, 100 V, 450 mA, 2-Pin SOD27, RoHS"                                                                                                                                    
+C1         C1206C102K4RACTU TopLayer FP-C1206C-EB-MFG       1905.512      1910.433      90       "CAP CER 1000PF 16V 10% X7R 1206"                                                                                                                                                       
