@@ -167,6 +167,27 @@ This design requires a positive and negative supply of 20V. This can be done usi
   <p align="center"><small><i>[1]Output Voltage [2]Output Current [3]Output Power [4]Positive Power Supply Rail</i></small></p>
 </p>
 
+## DC Bias Alternative
+The above design is a true class AB amplifier design, which makes use of a 180-degree conduction angle and removes crossover distortion. As mentioned previously, producing a negative supply with a high enough power output for the above design is very difficult and requires specialized ICs. The boost regulators mentioned above are not as desirable in such an application because they tend to introduce more noise. An alternative design can be seen below. This design utilizes a DC bias voltage to center the audio signal on a positive DC voltage, allowing us to use a single 30V supply. The signal is then passed through a unity gain buffer and then to the push-pull amplifier configuration. The push-pull amplifier configuration is used as a power stage amplifier, allowing us to push more power through the speaker. A large high-pass filter is added at the end to remove the initial DC bias. Unfortunately, the MOSFETs used in the previous designs could not be used for this circuit because their frequency response was not satisfactory above 10kHz.
+
+### DC Bias Schematic 
+<p align="center">
+  <img align="center" width="712" height="512" src="./LTSpice_simulations/Audio_Amplifier_DC_Bias_Schematic-1.png">
+  <p align="center"><small><i>LTSPICE Schematic Capture</i></small></p>
+</p>
+
+### DC Bias Simulation
+<p align="center">
+  <img align="center" width="712" height="512" src="./LTSpice_simulations/Audio_Amplifier_DC_Bias_Simulation-1.png">
+  <p align="center"><small><i>[1]Output Voltage [2]Output Current [3]Output Power</i></small></p>
+</p>
+
+### DC Bias Frequency Response
+<p align="center">
+  <img align="center" width="712" height="512" src="./LTSpice_simulations/Audio_Amplifier_DC_Bias_Frequency_Response-1.png">
+  <p align="center"><small><i>DC Bias Circuit Frequency Response (1Hz - 20kHz)</i></small></p>
+</p>
+
 # PCB
 
 ## 3D View 
