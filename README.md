@@ -78,8 +78,8 @@ My initial design was based on the class A amplifier design, as shown in the ima
 </p>
 
 <p align="center">
-  <img align="left" width="50%" src="./images/Class_A_Amplifier_Simulation.png">
-  <img align="center" width="50%" src="./images/Class_A_Amplifier_FreqResponse.png">
+  <img align="left" width="49%" src="./images/Class_A_Amplifier_Simulation.png">
+  <img align="center" width="49%" src="./images/Class_A_Amplifier_FreqResponse.png">
   <p align="center"><small><i>Class A Amplifier Simulation in LTSpice</i></small</p>
 </p>
 
