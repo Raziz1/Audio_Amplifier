@@ -1,6 +1,6 @@
 LTspice 24.0.11 for Windows
-Circuit: * C:\Users\rahim\Downloads\Coding Projects\Audio_Amplifier\LTSpice_simulations\Audio_Amplifier_DC_Bias.asc
-Start Time: Fri Jun  7 10:01:31 2024
+Circuit: * C:\Users\rahim\Downloads\Coding Projects\Audio_Amplifier\LTSpice_simulations\Class AB\DC Bias\Class_AB_Audio Amplifier_DC_Bias.asc
+Start Time: Sat Jun  8 12:15:48 2024
 solver = Normal
 Maximum thread count: 8
 tnom = 27
@@ -1910,5 +1910,5 @@ Source Step = 99.113%
 Source Step = 99.7964%
 Source stepping succeeded in finding the operating point.
 
-Total elapsed time: 0.635 seconds.
+Total elapsed time: 1.234 seconds.
 

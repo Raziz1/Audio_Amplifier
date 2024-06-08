@@ -39,11 +39,28 @@ The subsequent step in the process involved determining the preferred classifica
   <img align="center" width="368" height="256" src="https://blog.minicircuits.com/wp-content/uploads/2021/03/Amplifier_Classes-1.jpg">
 </p>
 
-I ended up settling on the class AB design for the following reasons:
-* The class AB design is more efficient than the class A design (50 - 70% efficiency)
-* The Class AB design does not suffer from the same clipping distortion as the Class B design. It benefits from biasing the transistors in a manner that ensures their conduction throughout all cycles of the input waveform
-* It is less complex than a class D design
-* The only drawback is that when there is no input signal, the transistors continue to conduct current, resulting in wasted power
+### Class A Amplifiers
+* Transistors conduct over the entire 360° cycle of the input signal
+* Highest linearity and fidelity, with minimal crossover distortion
+* Very inefficient, with typical efficiency around 25% due to constant current draw
+* Significant heat dissipation and power wastage, even with no input signal
+* Used in low-power applications where sound quality is the top priority
+
+### Class B Amplifiers
+* Use a pair of transistors, each conducting for 180° of the input signal cycle
+* Improved efficiency over Class A, up to 78% theoretical maximum
+* Suffer from crossover distortion around the zero-crossing point when transitioning between transistors
+* Reduced heat dissipation compared to Class A
+* Used in applications where efficiency is more important than linearity
+
+### Class AB Amplifiers
+*Combine the high efficiency of Class B with the low distortion of Class A
+* Bias both transistors to conduct for slightly more than 180° to eliminate crossover distortion
+* Efficiency up to 60%, lower than Class B but higher than Class A
+* Moderate heat dissipation, less than Class A but more than Class B
+* Popular choice for high-fidelity audio amplifiers, balancing efficiency and sound quality
+
+I ended up settling on designing a Class AB amplifier due to its compromise between efficiency and fidelity.
 
 The second decision was whether to use MOSFETs or BJTs for the power stage amplifier. I ultimately chose MOSFETs for the following reasons:
 * They generally have high input impedance, which reduces the loading effect on the preceding stages
@@ -52,19 +69,26 @@ The second decision was whether to use MOSFETs or BJTs for the power stage ampli
 * Reduced distortion compared to some BJT designs
 * The only drawback is they tend to be more expensive than BJT's
 
-### Initial Design
-My initial design was based on the class A amplifier design, which can be seen in the image below. However, the problem was that it drew too much current from the op-amp, and when no signal was fed, the amplifier continued to conduct large amounts of current.
+### Initial Class A Design
+My initial design was based on the class A amplifier design, as shown in the image below. However, the issue arose from its excessive current draw from the op-amp. Additionally, in the absence of a signal input, the amplifier continues to conduct large amounts of current, which could potentially damage the speaker.
 
 <p align="center">
-  <img align="center" width="712" height="512" src="./images/Class_A_Schematic.png">
-  <p align="center"><small><i>Class A Amplifier Design in LTSPICE</i></small</p>
+  <img align="center" width="100%" src="./images/Class_A_Amplifier_Schematic.png">
+  <p align="center"><small><i>Class A Amplifier Design in LTSpice</i></small</p>
 </p>
 
-# Design
+<p align="center">
+  <img align="left" width="50%" src="./images/Class_A_Amplifier_Simulation.png">
+  <img align="center" width="50%" src="./images/Class_A_Amplifier_FreqResponse.png">
+  <p align="center"><small><i>Class A Amplifier Simulation in LTSpice</i></small</p>
+</p>
+
+
+# Final Class AB Design
 ## Schematic
 <p align="center">
-  <img align="center" width="712" height="512" src="./images/Class_AB_Amplifier_Schematic.png">
-  <p align="center"><small><i>LTSPICE Schematic Capture</i></small></p>
+  <img align="center" width="100%" src="./images/Class_AB_Amplifier_Schematic.png">
+  <p align="center"><small><i>Class AB Amplifier LTSpice Schematic Capture</i></small></p>
 </p>
 
 * For this design, I ended up choosing the LT1124 op-amp for the signal amplifying stage. There were a couple of reasons behind this decision. Initially, I had planned for that stage to use a common emitter amplifier. However, the issue was that it required fine-tuning to determine the bias voltages. Additionally, by using the LT1124 op-amp, I could incorporate a potentiometer for variable gain ranging from 0 to 10dB.
@@ -72,13 +96,13 @@ My initial design was based on the class A amplifier design, which can be seen i
 
 ## Simulation
 <p align="center">
-  <img align="center" width="712" height="512" src="./images/Class_AB_Amplifier_Simulation.png">
-  <p align="center"><small><i>[1]Input Voltage [2]Output Current [3]Output Voltage</i></small</p>
+  <img align="center" width="100%" src="./images/Class_AB_Amplifier_Simulation.png">
+  <p align="center"><small><i>[1]Output Voltage [2]Output Current [3]Output Power</i></small</p>
 </p>
 
 <p align="center">
-  <img align="center" width="712" height="512" src="./images/Class_AB_Amplifier_Frequency_Response.png">
-  <p align="center"><small><i>Circuit Frequency Response 20Hz - 48kHz</i></small</p>
+  <img align="center" width="100%" src="./images/Class_AB_Amplifier_Frequency_Response.png">
+  <p align="center"><small><i>Amplifier Frequency Response 1Hz - 20kHz</i></small</p>
 </p>
 
 * For the spice simulation of the MOSFETs, custom models were obtained online through Infineon's website. The custom models can be found in the *spice_models* folder.
@@ -154,18 +178,6 @@ Based on the above calculations the MOSFETs shouldn't require any additional coo
 
 ## Power Supply Consideration
 This design requires a positive and negative supply of 20V. This can be done using two power supplies and setting the ground references appropriately as described in this website ([Get a positive and negative voltage output from power supply](https://forum.digikey.com/t/get-a-positive-and-negative-voltage-output-from-power-supply/10593)). Alternatively, I have created another design that uses a single 40V DC power supply. As seen in the schematic below, the voltage/signal amplifier and current/power amplifier remain the same. The key difference is that now the power rails are supplied by the LTM8027 DC/DC voltage regulator. The configuration of each regulator allows it to take an input of 40V and supply the top rail with 20V (4A) and the bottom rail with -20V(4A). According to the LTSpice simulation this circuit should function similarly to the original design. Additionally, the LTM8027 has a maximum switching speed of 500kHz so the frequency shouldn't be affected. <i>NOTE A split power supply design could be used however the appropriate regulators must be chosen so that the voltage rails under load remain stable</i>
-
-### Single Supply Schematic 
-<p align="center">
-  <img align="center" width="712" height="512" src="./images/Class_AB_Single_Supply_Schematic.png">
-  <p align="center"><small><i>LTSPICE Schematic Capture</i></small></p>
-</p>
-
-### Single Supply Simulation
-<p align="center">
-  <img align="center" width="712" height="512" src="./images/Class_AB_Single_Supply_Simulation.png">
-  <p align="center"><small><i>[1]Output Voltage [2]Output Current [3]Output Power [4]Positive Power Supply Rail</i></small></p>
-</p>
 
 ## DC Bias Alternative
 The above design is a true class AB amplifier design, which makes use of a 180-degree conduction angle and removes crossover distortion. As mentioned previously, producing a negative supply with a high enough power output for the above design is very difficult and requires specialized ICs. The boost regulators mentioned above are not as desirable in such an application because they tend to introduce more noise. An alternative design can be seen below. This design utilizes a DC bias voltage to center the audio signal on a positive DC voltage, allowing us to use a single 30V supply. The signal is then passed through a unity gain buffer and then to the push-pull amplifier configuration. The push-pull amplifier configuration is used as a power stage amplifier, allowing us to push more power through the speaker. A large high-pass filter is added at the end to remove the initial DC bias. Unfortunately, the MOSFETs used in the previous designs could not be used for this circuit because their frequency response was not satisfactory above 10kHz.
