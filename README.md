@@ -177,31 +177,32 @@ $Tj = Pavg * RthJA + TA$
 
 Based on the above calculations the MOSFETs shouldn't require any additional cooling methods.
 
-## Power Supply Consideration
-This design requires a positive and negative supply of 20V. This can be done using two power supplies and setting the ground references appropriately as described in this website ([Get a positive and negative voltage output from power supply](https://forum.digikey.com/t/get-a-positive-and-negative-voltage-output-from-power-supply/10593)). Alternatively, I have created another design that uses a single 40V DC power supply. As seen in the schematic below, the voltage/signal amplifier and current/power amplifier remain the same. The key difference is that now the power rails are supplied by the LTM8027 DC/DC voltage regulator. The configuration of each regulator allows it to take an input of 40V and supply the top rail with 20V (4A) and the bottom rail with -20V(4A). According to the LTSpice simulation this circuit should function similarly to the original design. Additionally, the LTM8027 has a maximum switching speed of 500kHz so the frequency shouldn't be affected. <i>NOTE A split power supply design could be used however the appropriate regulators must be chosen so that the voltage rails under load remain stable</i>
+# Power Supply Consideration
+This design requires a positive and negative supply of 20V. This can be done using two power supplies and setting the ground references appropriately as described in this website ([Get a positive and negative voltage output from power supply](https://forum.digikey.com/t/get-a-positive-and-negative-voltage-output-from-power-supply/10593)). Alternatively, a split power supply design is another approach; however, the desired voltage and current specifications are simply too large for any regulators on the market.
 
 ## DC Bias Alternative
-The above design is a true class AB amplifier design, which makes use of a 180-degree conduction angle and removes crossover distortion. As mentioned previously, producing a negative supply with a high enough power output for the above design is very difficult and requires specialized ICs. The boost regulators mentioned above are not as desirable in such an application because they tend to introduce more noise. An alternative design can be seen below. This design utilizes a DC bias voltage to center the audio signal on a positive DC voltage, allowing us to use a single 30V supply. The signal is then passed through a unity gain buffer and then to the push-pull amplifier configuration. The push-pull amplifier configuration is used as a power stage amplifier, allowing us to push more power through the speaker. A large high-pass filter is added at the end to remove the initial DC bias. Unfortunately, the MOSFETs used in the previous designs could not be used for this circuit because their frequency response was not satisfactory above 10kHz.
+Since I only had a single power supply at home, I decided to provide an alternative circuit that utilizes a single supply and injects a DC bias voltage into the audio signal. The signal is then passed through a unity gain buffer and subsequently to the push-pull amplifier configuration. The push-pull amplifier configuration serves as a power stage amplifier, enabling us to deliver more power to the speaker. Finally, a large high-pass filter is added at the end to eliminate the initial DC bias.
 
 ### DC Bias Schematic 
 <p align="center">
-  <img align="center" width="712" height="512" src="./LTSpice_simulations/Audio_Amplifier_DC_Bias_Schematic-1.png">
-  <p align="center"><small><i>LTSPICE Schematic Capture</i></small></p>
+  <img align="center" width="100%" src="./images/Class_AB_Amplifier_DC_Bias_Schematic.png">
+  <p align="center"><small><i>Class AB Amplifier with DC Bias LTSpice Capture</i></small></p>
 </p>
 
 ### DC Bias Simulation
 <p align="center">
-  <img align="center" width="712" height="512" src="./LTSpice_simulations/Audio_Amplifier_DC_Bias_Simulation-1.png">
+  <img align="center" width="100%" src="./images/Class_AB_Amplifier_DC_Bias_Simulation.png">
   <p align="center"><small><i>[1]Output Voltage [2]Output Current [3]Output Power</i></small></p>
 </p>
 
 ### DC Bias Frequency Response
 <p align="center">
-  <img align="center" width="712" height="512" src="./LTSpice_simulations/Audio_Amplifier_DC_Bias_Frequency_Response-1.png">
+  <img align="center" width="100%" src="./images/Class_AB_Amplifier_DC_Bias_Frequency Response.png">
   <p align="center"><small><i>DC Bias Circuit Frequency Response (1Hz - 20kHz)</i></small></p>
 </p>
 
 # PCB
+The PCB design shown below is for the audio amplifier with dual supplies (+20V and -20V).
 
 ## 3D View 
 <p align="center">
@@ -220,7 +221,6 @@ The above design is a true class AB amplifier design, which makes use of a 180-d
 * I used the Saturn PCB Design Toolkit to determine the amount of current that the VIAs could handle. Based on power integrity simulations, the VIAs were more than capable of meeting the current requirements. Nevertheless, I ended up adding extra headroom for the current by increasing both the trace width and PCB thickness.
 
 # Resources
-* LTSPICE
 * [Amplifier Series](https://www.youtube.com/watch?v=Yv75o45Zrak&list=PL1GmhyN81MlmMcJZy58bTeupRl7zOO8Sk&index=2&ab_channel=EEforEveryone)
 * [Online Circuit Simulator](https://www.falstad.com/circuit/)
 * [Introduction to the Amplifier](https://www.electronics-tutorials.ws/amplifier/amp_1.html)
