@@ -214,7 +214,7 @@ The PCB design shown below is for the audio amplifier with dual supplies (+20V a
 
 ## Power Integrity
 <p align="center">
-  <img align="center" width="712" height="512" src=".\pcb\Audio_Amplifier [PDNA]_2024-01-20_15.00\Images\7325b7f2-6679-43e4-a6ba-8f5da0a1302c.png">
+  <img align="center" width="712" height="512" src="./pcb/Audio_Amplifier%20%5BPDNA%5D_2024-01-20_15.00/Images/7325b7f2-6679-43e4-a6ba-8f5da0a1302c.png">
   <p align="center"><small><i>Power Analyzer by Keysight - Altium</i></small></p>
 </p>
 
